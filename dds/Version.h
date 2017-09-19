@@ -5,7 +5,7 @@
  * See: http://www.opendds.org/license.html
  */
 
-#define DDS_MAJOR_VERSION 3
-#define DDS_MINOR_VERSION 12
+#define DDS_MAJOR_VERSION 9
+#define DDS_MINOR_VERSION 9
 #define DDS_MICRO_VERSION 0
-#define DDS_VERSION "3.12"
+#define DDS_VERSION "9.9"

@@ -148,10 +148,26 @@ sub verify_git_status_clean {
   return $clean;
 }
 
-sub message_git_status_clean {
-  my $settings = shift;
-  return "The working directory is not clean:\n" . $settings->{unclean} .
-         "  Commit to source control, or run git clean before continuing."
+sub remedy_git_status_clean {
+  my $settings = shift();
+  my $version = $settings->{version};
+  system("git diff") == 0 or die "Could not execute: git diff";
+  print "Would you like to add and commit these changes [y/n]? ";
+  while (<STDIN>) {
+    chomp;
+    if ($_ eq "n") {
+      return 0;
+    } elsif ($_ eq "y") {
+      last;
+    } else {
+      print "Please answer y or n. ";
+    }
+  }
+  system("git add docs/history/ChangeLog-$version") == 0 or die "Could not execute: git add -u docs/history/ChangeLog-$version";
+  system("git add -u") == 0 or die "Could not execute: git add -u";
+  my $message = "This is version $version";
+  system("git commit -m '" . $message . "'") == 0 or die "Could not execute: git commit -m";
+  return 1;
 }
 ############################################################################
 sub verify_update_version_file {
@@ -664,7 +680,7 @@ sub remedy_git_changes_pushed {
   my $result = system("git push $remote $settings->{branch}");
   print "pushing tags with git push $remote --tags\n";
   $result = $result || system("git push $remote --tags");
-  print "pushing latest-release branch"
+  print "pushing latest-release branch";
   $result = $result || system("git push $remote $settings->{branch}:latest-release");
   return !$result;
 }
@@ -1354,7 +1370,8 @@ my %release_step_hash  = (
   },
   'Commit changes to GIT' => {
     verify  => sub{verify_git_status_clean(@_, 1)},
-    message => sub{message_commit_git_changes(@_)}
+    message => sub{message_commit_git_changes(@_)},
+    remedy  => sub{remedy_git_status_clean(@_)}
   },
   'Verify changes pushed' => {
     prereqs => ('Verify remote arg'),
@@ -1440,7 +1457,8 @@ my %release_step_hash  = (
   },
   'Commit NEWS Template Section' => {
     verify  => sub{verify_git_status_clean(@_, 1)},
-    message => sub{message_commit_git_changes(@_)}
+    message => sub{message_commit_git_changes(@_)},
+    remedy  => sub{remedy_git_status_clean(@_)}
   }
 
 );

@@ -1,0 +1,260 @@
+Mon Sep 18 14:22:52 UTC 2017  Adam Mitz  <mitza@ociweb.com>
+        commit 9db0346456393fcd30c80582b320d5fb8f9ca64f
+
+          Merge pull request #743 from huangminghuang/master
+
+          fix some federated inforepo memory leaks
+
+Fri Sep 15 13:46:15 UTC 2017  Huang-Ming Huang  <huangming.huang@gmail.com>
+        commit 58d099a70392c1883e52dd6fb844d3396ffe112c
+
+        * dds/InfoRepo/DCPSInfoRepoServ.cpp:
+        * dds/InfoRepo/FederatorManagerImpl.cpp:
+        * dds/InfoRepo/UpdateListener_T.cpp:
+        * dds/InfoRepo/UpdateReceiver_T.cpp:
+        * dds/InfoRepo/UpdateReceiver_T.h:
+
+          fix some federated inforepo memory leaks
+
+Fri Sep 15 20:31:17 UTC 2017  Adam Mitz  <mitza@ociweb.com>
+        commit 2138273031e3282554de3e2ae21370913cf502cb
+
+          Merge pull request #692 from
+          jwillemsen/jwi-dp-handleexceptionresult
+
+          Instead of returning an error we have to set the
+          shutdown_result_, th…
+
+Fri Sep 15 20:25:09 UTC 2017  Adam Mitz  <mitza@ociweb.com>
+        commit f6ee9b29b18add521ec48a900c8a103f3c6a5676
+
+          Merge pull request #742 from mitza-oci/master
+
+          fix asan invalid stack use errors
+
+Fri Sep 15 17:48:37 UTC 2017  Adam Mitz  <mitza@ociweb.com>
+        commit 22e2a3a8a1f0d6ba636aa0f6785e3e7727b22929
+
+        * dds/InfoRepo/UpdateManager.cpp:
+        * tests/transport/rtps/publisher.cpp:
+        * tests/transport/rtps/subscriber.cpp:
+
+          fix asan invalid stack use errors
+
+Thu Sep 14 19:42:27 UTC 2017  Adam Mitz  <mitza@ociweb.com>
+        commit 647338e0bb7845a81bc4423117436db85d1a3d78
+
+          Merge pull request #741 from huangminghuang/master
+
+          Fix persistent Inforepo memory leak
+
+Wed Sep 13 21:04:22 UTC 2017  Huang-Ming Huang  <huangming.huang@gmail.com>
+        commit de860d6e114162d89242f9b2442677e1b41f3d4a
+
+        * dds/InfoRepo/DCPSInfo_i.cpp:
+        * dds/InfoRepo/DCPS_IR_Domain.cpp:
+        * dds/InfoRepo/DCPS_IR_Participant.cpp:
+        * dds/InfoRepo/DCPS_IR_Publication.cpp:
+        * dds/InfoRepo/DCPS_IR_Subscription.cpp:
+        * dds/InfoRepo/DCPS_IR_Topic.cpp:
+        * dds/InfoRepo/DCPS_IR_Topic_Description.cpp:
+
+          Fix persistent Inforepo memory leak
+
+Wed Sep 13 21:56:03 UTC 2017  Adam Mitz  <mitza@ociweb.com>
+        commit 4e787a1dcb28b2d7c3ae83fa1f3052aeeeaeb1c1
+
+          Merge pull request #740 from huangminghuang/master
+
+          Fix compiler error for gcc 4.1.2
+
+Wed Sep 13 17:41:22 UTC 2017  Huang-Ming Huang  <huangming.huang@gmail.com>
+        commit ce7083f7c42e39ca85bb9d7a9fce2abd4dcf7d9f
+
+        * dds/DCPS/DataReaderImpl_T.h:
+
+          Fix compiler error for gcc 4.1.2
+
+Wed Sep 13 14:20:10 UTC 2017  Adam Mitz  <mitza@ociweb.com>
+        commit e04379f6b90cffc3a2a5bbb0654d57b77da81a5c
+
+          Merge pull request #738 from jrw972/master
+
+          Push latest-branch on release
+
+Wed Sep 13 14:19:12 UTC 2017  Adam Mitz  <mitza@ociweb.com>
+        commit a51252c5f8b53b61e1da41f7bab72fc1cc585f97
+
+          Merge pull request #739 from huangminghuang/master
+
+          Fix memory leak in ZeroCopySeq
+
+Tue Sep 12 19:30:31 UTC 2017  Huang-Ming Huang  <huangming.huang@gmail.com>
+        commit 403630ccd60de5fd7b86a08f04afa88095815e3d
+
+        * dds/DCPS/FilterEvaluator.h:
+
+          Remove unused function
+
+Tue Sep 12 15:22:51 UTC 2017  Huang-Ming Huang  <huangming.huang@gmail.com>
+        commit 812180cc4107d2f44fffbd62da3761c98ba18aac
+
+        * dds/DCPS/DataReaderImpl_T.h:
+
+          Fix compile problem for Safety profile
+
+Mon Sep 11 19:48:33 UTC 2017  Huang-Ming Huang  <huangming.huang@gmail.com>
+        commit c3cb949bc25e0ca67e8c18a34495912a64cf558e
+
+        * dds/DCPS/ReceivedDataElementList.h:
+        * dds/DCPS/ZeroCopySeq_T.inl:
+
+          Fix some compiler errors
+
+Mon Sep 11 18:42:45 UTC 2017  Huang-Ming Huang  <huangming.huang@gmail.com>
+        commit 9146970594d0672827d6e91ea4751885c0f74da5
+
+        * dds/DCPS/DataReaderImpl.h:
+        * dds/DCPS/DataReaderImpl_T.h:
+        * dds/DCPS/FilterEvaluator.h:
+        * dds/DCPS/Loaner.h:
+        * dds/DCPS/RakeResults_T.cpp:
+        * dds/DCPS/ReceivedDataElementList.cpp:
+        * dds/DCPS/ReceivedDataElementList.h:
+        * dds/DCPS/ZeroCopySeq_T.cpp:
+        * dds/DCPS/ZeroCopySeq_T.h:
+        * dds/DCPS/ZeroCopySeq_T.inl:
+
+          Fix memory leak in ZeroCopySeq
+
+Mon Sep 11 16:37:20 UTC 2017  Justin R. Wilson  <jrw972@gmail.com>
+        commit fe160f3bc1921b7fc4f08aa265e9e44730b12619
+
+        * tools/scripts/gitrelease.pl:
+
+          Push latest-branch on release
+
+Mon Sep 11 15:45:20 UTC 2017  Justin R. Wilson  <jrw972@gmail.com>
+        commit df0a8b7fabd02013525c40ed2ffa8c2395005d3c
+
+        * README.md:
+
+          Document Docker image release tags
+
+Fri Sep 08 14:02:56 UTC 2017  Adam Mitz  <mitza@ociweb.com>
+        commit f091e59c25cac379790d5fc1da401953d532bc80
+
+          Merge pull request #737 from huangminghuang/master
+
+          memory leak fixes
+
+Fri Sep 08 14:02:49 UTC 2017  Adam Mitz  <mitza@ociweb.com>
+        commit 2eb60a77754b345307245aef5adc31427eb31c68
+
+          Merge pull request #736 from jwillemsen/jwi-acetaox45
+
+          Use ACE/TAO 6.4.5/2.4.5
+
+Fri Sep 08 14:02:41 UTC 2017  Adam Mitz  <mitza@ociweb.com>
+        commit 8fa31ea05e512b2440ad6ce8d1540fa20ac7579a
+
+          Merge pull request #735 from jwillemsen/jwi-gcc7
+
+          Use gcc7 on travis-ci
+
+Thu Sep 07 15:38:06 UTC 2017  Huang-Ming Huang  <huangming.huang@gmail.com>
+        commit ac60a704fc9ec0a50335a6685f8613e237010acb
+
+        * dds/DCPS/ReplayerImpl.cpp:
+        * dds/DCPS/transport/framework/DataLink.cpp:
+        * dds/DCPS/transport/framework/TransportClient.cpp:
+
+          Fix memory leak in replayer
+
+Tue Sep 05 19:37:40 UTC 2017  Huang-Ming Huang  <huangming.huang@gmail.com>
+        commit 194b4025cecfbd00a16c398b44eb9ab5305f0990
+
+        * tools/modeling/tests/RemoteInstHandles/subscriber.cpp:
+
+          Fix memory leak for tools/modeling/tests/RemoteInstHandles
+
+Thu Sep 07 08:56:36 UTC 2017  Johnny Willemsen  <jwillemsen@remedy.nl>
+        commit e6a9905ee87300eaec74d8d2b76072831b56e8be
+
+        * .travis.yml:
+
+          Set COMPILER to g++-6 when we are using g++ 6
+
+Thu Sep 07 08:54:46 UTC 2017  Johnny Willemsen  <jwillemsen@remedy.nl>
+        commit b168b9f5d58a1c3d2b09ccd4a5ed569b143e98ef
+
+        * configure:
+
+          Use ACE/TAO 6.4.5/2.4.5
+
+Wed Sep 06 14:18:35 UTC 2017  Johnny Willemsen  <jwillemsen@remedy.nl>
+        commit 34830c59b650802619c3cc3619d7c23f7bc40d89
+
+        * .travis.yml:
+
+          Use gcc6 with java
+
+Tue Sep 05 14:37:28 UTC 2017  Johnny Willemsen  <jwillemsen@remedy.nl>
+        commit 8a1101a6d8185ed619549e0903557714356df51d
+
+        * .travis.yml:
+
+          Use gcc7 on travis-ci
+
+Fri Sep 01 15:03:31 UTC 2017  Adam Mitz  <mitza@ociweb.com>
+        commit da79a9feab4423f6adf05705df50c26cf0134ce3
+
+        * NEWS.md:
+
+          NEWS.md set up for future release
+
+Fri Jun 30 19:49:06 UTC 2017  Johnny Willemsen  <jwillemsen@remedy.nl>
+        commit eb00f8c8653cc3ddd8dc43d5a040a91cf06624aa
+
+        * dds/idl/langmap_generator.cpp:
+        * tests/DCPS/FooTest3_0/SubDriver.cpp:
+        * tests/DCPS/Partition/Publisher.cpp:
+        * tests/DCPS/TestFramework/TestFramework_T.cpp:
+        * tests/DCPS/TransientLocalMultiInstanceTest/publisher.cpp:
+        * tools/monitor/MonitorDataStorage.cpp:
+
+          Removed double semi colon
+
+          * dds/idl/langmap_generator.cpp:
+          * tests/DCPS/FooTest3_0/SubDriver.cpp:
+          * tests/DCPS/Partition/Publisher.cpp:
+          * tests/DCPS/TestFramework/TestFramework_T.cpp:
+          * tests/DCPS/TransientLocalMultiInstanceTest/publisher.cpp:
+          * tools/monitor/MonitorDataStorage.cpp:
+
+Fri Jun 30 19:48:06 UTC 2017  Johnny Willemsen  <jwillemsen@remedy.nl>
+        commit 67606a0572fe02130dc4bfd23c836d6b42692e21
+
+        * dds/DCPS/DataDurabilityCache.cpp:
+        * dds/DCPS/DomainParticipantImpl.cpp:
+
+          Removed double semi-colon
+
+          * dds/DCPS/DataDurabilityCache.cpp:
+          * dds/DCPS/DomainParticipantImpl.cpp:
+
+Thu Jun 29 11:09:55 UTC 2017  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * dds/DCPS/DomainParticipantImpl.cpp:
+
+          Instead of returning an error we have to set the
+          shutdown_result_, this method is called from the ACE reactor
+          which is not aware of the DDS return codes
+
+          * dds/DCPS/DomainParticipantImpl.cpp:
+
+Local Variables:
+mode: change-log
+add-log-time-format: (lambda () (progn (setq tz (getenv "TZ")) (set-time-zone-rule "UTC") (setq time (format-time-string "%a %b %e %H:%M:%S %Z %Y" (current-time))) (set-time-zone-rule tz) time))
+indent-tabs-mode: nil
+End:
